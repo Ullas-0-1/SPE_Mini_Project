@@ -1,0 +1,42 @@
+<!-- app/templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Scientific Calculator</h1>
+        <form method="post">
+            <label>Choose Operation:</label>
+            <select name="operation" required>
+                <option value="sqrt">Square Root</option>
+                <option value="factorial">Factorial</option>
+                <option value="ln">Natural Logarithm</option>
+                <option value="power">Power</option>
+            </select>
+
+            <label>Number 1:</label>
+            <input type="number" step="any" name="number1" required>
+
+            <label>Number 2 (only for Power):</label>
+            <input type="number" step="any" name="number2">
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        {% if result %}
+        <div class="result">
+            <strong>Result:</strong> {{ result }}
+        </div>
+        {% endif %}
+
+        {% if error %}
+        <div class="error">
+            <strong>Error:</strong> {{ error }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
