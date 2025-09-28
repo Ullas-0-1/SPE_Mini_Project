@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // The ID for your Docker Hub credentials in Jenkins
-        DOCK-HUB_CREDENTIALS_ID = 'dockerhub-creds'
+        DOCK_HUB_CREDENTIALS_ID = 'dockerhub-creds'
         
         // Your full Docker image name
         DOCKER_IMAGE_NAME = 'ullas474/scientific-calculator'
