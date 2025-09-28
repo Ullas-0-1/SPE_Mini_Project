@@ -1,0 +1,30 @@
+---
+- name: Deploy Scientific Calculator Docker Container
+  hosts: localhost
+  connection: local
+  become: yes
+
+  vars:
+    docker_image: "ullas474/scientific-calculator:latest"
+    container_name: "scientific-calculator-app"
+    publish_port: "8000:80"
+
+  tasks:
+    - name: Pull the latest Docker image from Docker Hub
+      community.docker.docker_image:
+        name: "{{ docker_image }}"
+        source: pull
+
+    - name: Stop and remove any existing container with the same name
+      community.docker.docker_container:
+        name: "{{ container_name }}"
+        state: absent
+
+    - name: Run the new Docker container from the pulled image
+      community.docker.docker_container:
+        name: "{{ container_name }}"
+        image: "{{ docker_image }}"
+        state: started
+        ports:
+          - "{{ publish_port }}"
+        restart_policy: always
