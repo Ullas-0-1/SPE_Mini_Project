@@ -1,7 +1,7 @@
 #this file contains the core functions implemented in the scientific calculator. extra functions canbe added.
 import math
 
-#Square root Function
+#Square root function
 def sqrt(x):
     if x < 0:
         raise ValueError("Cannot take square root of a negative number")
