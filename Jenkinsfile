@@ -47,7 +47,7 @@ pipeline {
         stage('Deploy with Ansible') {
             steps {
                 // Executes your Ansible playbook to deploy the container locally
-                sh 'ansible-playbook deploy.yml'
+                'ansible-playbook deploy.yml'
             }
         }
     }
