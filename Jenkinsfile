@@ -22,7 +22,7 @@ pipeline {
                 script {
                     // This uses a clean Python Docker image to run tests,
                     // ensuring a consistent environment every time.
-                    docker.image('python:3.9-slim').inside {
+                    docker.image('python:3.9-slim').inside('-u root') {
                         sh 'pip install -r requirements.txt'
                         sh 'pytest app'
                     }
