@@ -2,7 +2,7 @@
 - name: Deploy Scientific Calculator Docker Container
   hosts: localhost
   connection: local
-  become: yes
+
 
   vars:
     docker_image: "ullas474/scientific-calculator:latest"
