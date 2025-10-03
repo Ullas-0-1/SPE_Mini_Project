@@ -7,7 +7,7 @@ from app.calculator import sqrt, factorial, ln, power
 
 
 
-# Create FastAPI instance
+# Create FastAPI instance -main application
 app = FastAPI()
 
 # Configure template and static folder
