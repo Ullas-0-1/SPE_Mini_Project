@@ -37,7 +37,7 @@ pipeline {
                     def customImage = docker.build(DOCKER_IMAGE_NAME)
 
                     // Logs into Docker Hub and pushes the new image
-                    docker.withRegistry('https://registry.hub.docker.com', DOCK-HUB_CREDENTIALS_ID) {
+                    docker.withRegistry('https://registry.hub.docker.com', DOCK_HUB_CREDENTIALS_ID) {
                         customImage.push("latest")
                     }
                 }
