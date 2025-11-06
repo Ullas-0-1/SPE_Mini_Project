@@ -22,3 +22,6 @@ def ln(x):
 #Power function
 def power(x, b):
     return math.pow(x, b)
+
+
+#my name is ullas
