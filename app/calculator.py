@@ -1,4 +1,4 @@
-#this file contains the core functions implemented in the scientific calculator. extra functions canbe added
+#this file contains the core functions implemented in the scientific calculator. extra functions canbe added....
 import math
 
 #Square root function
